@@ -1,0 +1,97 @@
+<template>
+    <div class="page no-toolbar no-navbar" data-name="resultSearch">
+ <div class="navbar">
+    <div class="navbar-inner">
+      <div class="title">Search Bar</div>
+      <div class="subnavbar">
+        <!-- Searchbar with auto init -->
+        <form class="searchbar searchbar-init" data-search-container=".search-here">
+          <div class="searchbar-inner">
+            <div class="searchbar-input-wrap">
+              <input type="search" placeholder="搜索" id="search">
+              <i class="searchbar-icon"></i>
+              <span class="input-clear-button"></span>
+            </div>
+            <a href="/index/" class="searchbar-disable-button">取消</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="page-content">    
+    <!-- search target list -->
+    <div class="list simple-list search-list searchbar-found">
+      <ul>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Acura</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Audi</div>
+          </div>
+        </li>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">BMW</div>
+          </div>
+        </li>
+        ...
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Volvo</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Nothing found message -->
+    <div class="block searchbar-not-found">
+      <div class="block-inner">Nothing found</div>
+    </div>
+    <a @click="clear">清楚清楚</a>
+  </div>
+</div>
+</template>
+<style>
+</style>
+<script>
+return {
+    data: function() {
+        return {
+            title: '消息'
+        }
+    },
+    created: function(){
+        this.$app.searchbar.create({
+          el: '.searchbar',
+          searchContainer: '.list',
+          searchIn: '.item-title',
+          on: {
+            search(sb, query, previousQuery) {
+              console.log(query, previousQuery);
+            }
+          }
+
+        })
+        // this.$app.hideToolbar('#wechat-toolbar');
+    },
+    beforeCreate: function(){
+        console.log()
+        // this.$app.toolbar.hide(".wehcat-toolbar",false);
+    },
+    methods: {
+        clear: function() {
+            this.$app.searchbar.clear("#search");
+        },
+    },
+    on: {
+        pageInit: function() {
+            // do something on page init
+        },
+        pageAfterOut: function() {
+            // page has left the view
+        },
+    }
+}
+</script>

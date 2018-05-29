@@ -1,0 +1,148 @@
+<template>
+    <div class="page no-toolbar" data-name="setDetail">
+        <!-- Top Navbar -->
+        <div class="navbar color-theme-black">
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="ios-only">我</span>
+                    </a>
+                </div>
+                <div class="title">设置</div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="list list-same mine" style="margin-top: 10px!important;">
+                <ul>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title">账号与安全</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list list-same mine">
+                <ul>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title">新消息通知</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title">隐私</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title">通用</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list list-same mine">
+                <ul>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title">帮助与反馈</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title">关于微信</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list list-same mine">
+                <ul>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title">插件</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list list-same mine no-arrow">
+                <ul>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title" style="width: 100%;text-align: center;">切换账号</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="list list-same mine no-arrow">
+                <ul>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title" style="width: 100%;text-align: center;">退出登录</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+</style>
+<script>
+    return {
+        data: function () {
+            return {
+                title: '消息'
+            }
+        },
+        created: function () {
+            // this.$app.hideToolbar('#wechat-toolbar');
+        },
+        beforeCreate: function () {
+            // $$("#wehcat-toolbar").addClass("toolbar-hidden");
+            // this.$app.toolbar.hide("#wehcat-toolbar");
+        },
+        beforeDestroy: function () {
+            // $$("#wehcat-toolbar").removeClass("toolbar-hidden");
+        },
+        destroyed: function () {
+            // $$("#wehcat-toolbar").removeClass("toolbar-hidden");
+        },
+        methods: {
+            openAlert: function () {
+                var self = this.$app.dialog.alert('Hello world!');
+            },
+        },
+        on: {
+            pageBeforeIn: function () {
+
+            },
+            pageInit: function () {
+
+            },
+            pageBeforeOut: function () {
+
+            },
+            pageAfterOut: function () {
+
+            },
+        }
+    }
+</script>

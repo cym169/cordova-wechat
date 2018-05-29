@@ -1,0 +1,129 @@
+<template>
+    <div class="page" data-name="me">
+    <div class="navbar color-theme-black">
+        <div class="navbar-inner">
+            <div class="title">我</div>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="list list-same mine" style="margin-top: 10px!important;">
+            <ul>
+                <li>
+                    <a href="/meDetail/" class="item-link item-content">
+                        <div class="item-media">
+                            <img src="images/wechat1.jpg" width="55" height="55s">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">
+                                <div class="item-header">Mr.Nobody</div>
+                                微信号：chenyaming1434
+                            </div>
+                            <div class="item-after"><img src="images/qrcode.svg" width="22" height="22"></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="list list-same">
+            <ul>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/wallet.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">钱包</div>
+                    </div>
+                  </a>
+                </li>
+            </ul>
+        </div>
+        <div class="list list-same">
+            <ul>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/collection.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">收藏</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/photos.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">相册</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/card.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">卡包</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/expression.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">表情</div>
+                    </div>
+                  </a>
+                </li>
+            </ul>
+        </div>
+        <div class="list list-same">
+            <ul>
+                <li>
+                  <a href="/setDetail/" class="item-link item-content">
+                    <div class="item-media"><img src="images/setting.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">设置</div>
+                    </div>
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</template>
+<style>
+.list-same{
+    margin:0 0 20px 0!important;
+}
+.mine .item-content .item-media{
+    padding: 10px 0!important;
+}
+.mine .item-content .item-media img{
+    border-radius: 4px;
+}
+.mine .item-content .item-inner .item-title{
+    font-size: 14px;
+}
+.mine .item-content .item-inner .item-title .item-header{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+</style>
+<script>
+return {
+    data: function() {
+        return {
+            title: '消息'
+        }
+    },
+    methods: {
+        openAlert: function() {
+            var self = this.$app.dialog.alert('Hello world!');
+        },
+    },
+    on: {
+        pageInit: function() {
+            // do something on page init
+        },
+        pageAfterOut: function() {
+            // page has left the view
+        },
+    }
+}
+</script>

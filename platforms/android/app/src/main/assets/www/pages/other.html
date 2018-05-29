@@ -1,0 +1,37 @@
+<template>
+    <div class="page" data-name="other">
+        
+    </div>
+</template>
+<style>
+</style>
+<script>
+return {
+    data: function() {
+        return {
+            title: '消息'
+        }
+    },
+    created: function(){
+
+    },
+    beforeCreate: function(){
+        // console.log(this.$app)
+
+        // this.$app.toolbar.hide(".wehcat-toolbar",true);
+    },
+    methods: {
+        openAlert: function() {
+            var self = this.$app.dialog.alert('Hello world!');
+        },
+    },
+    on: {
+        pageInit: function() {
+            // do something on page init
+        },
+        pageAfterOut: function() {
+            // page has left the view
+        },
+    }
+}
+</script>

@@ -1,0 +1,62 @@
+<template>
+    <div class="page no-toolbar" data-name="chatDetail">
+        <!-- Top Navbar -->
+        <div class="navbar color-theme-black">
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="ios-only">返回</span>
+                    </a>
+                </div>
+                <div class="title">聊天详情</div>
+                <!-- <div class="right">
+                    <a class="/chatDetail/"><i class="f7-icons">person</i></a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+</style>
+<script>
+    return {
+        data: function () {
+            return {
+                title: '消息'
+            }
+        },
+        created: function () {
+            // this.$app.hideToolbar('#wechat-toolbar');
+        },
+        beforeCreate: function () {
+            // $$("#wehcat-toolbar").addClass("toolbar-hidden");
+            // this.$app.toolbar.hide("#wehcat-toolbar");
+        },
+        beforeDestroy: function(){
+            // $$("#wehcat-toolbar").removeClass("toolbar-hidden");
+        },
+        destroyed: function(){
+            // $$("#wehcat-toolbar").removeClass("toolbar-hidden");
+        },
+        methods: {
+            openAlert: function () {
+                var self = this.$app.dialog.alert('Hello world!');
+            },
+        },
+        on: {
+            pageBeforeIn: function () {
+               
+            },
+            pageInit: function () {
+                
+            },
+            pageBeforeOut: function () {
+                
+            },
+            pageAfterOut: function () {
+
+            },
+        }
+    }
+</script>

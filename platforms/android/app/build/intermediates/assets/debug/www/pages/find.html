@@ -1,0 +1,146 @@
+<template>
+    <div class="page" data-name="find">
+         <div class="navbar color-theme-black">
+            <div class="navbar-inner">
+                <div class="title">发现</div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="list list-same" style="margin-top: 10px!important;">
+              <ul>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/friend.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">朋友圈</div>
+                      <div class="item-after"><span class="badge color-red">5</span></div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="list list-same">
+              <ul>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/scan.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">扫一扫</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/shake.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">摇一摇</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="list list-same">
+              <ul>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/look.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">看一看</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/search.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">搜一搜</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="list list-same">
+              <ul>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/nearby.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">附近的人</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/drifting.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">漂流瓶</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="list list-same">
+              <ul>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/shopping.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">购物</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/games.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="item-title">游戏</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="list list-same">
+              <ul>
+                <li>
+                  <a href="#" class="item-link item-content">
+                    <div class="item-media"><img src="images/program.svg" width="24" height="24"></div>
+                    <div class="item-inner">
+                      <div class="items-title">小程序</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+#friend{
+    margin: 10px 0 20px 0;
+}
+.list-same{
+    margin:0 0 20px 0!important;
+}
+</style>
+<script>
+return {
+    data: function() {
+        return {
+            title: '消息'
+        }
+    },
+    methods: {
+        openAlert: function() {
+            var self = this.$app.dialog.alert('Hello world!');
+        },
+    },
+    on: {
+        pageInit: function() {
+            // do something on page init
+        },
+        pageAfterOut: function() {
+            // page has left the view
+        },
+    }
+}
+</script>

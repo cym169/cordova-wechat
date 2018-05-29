@@ -1,0 +1,191 @@
+<template>
+    <div class="page" data-name="news">
+        <!-- Top Navbar -->
+        <div class="navbar color-theme-black">
+            <div class="navbar-inner">
+                <!-- <div class="left">
+          <a class="link back">
+            <i class="icon icon-back"></i>
+            <span class="ios-only">Back</span>
+          </a>
+        </div> -->
+                <div class="title">微信</div>
+                <div class="right">
+                    <a class="link"><i class="f7-icons">add</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="page-content ptr-content" data-ptr-distance="55">
+            <!-- Default pull to refresh preloader-->
+            <div class="ptr-preloader">
+              <div class="preloader"></div>
+              <div class="ptr-arrow"></div>
+            </div>
+            <div class="search-box">
+                <a class="link" href="/resultSearch/"><i class="f7-icons">search</i>搜索</a>
+            </div>
+            <div class="list media-list" id="user-list">
+                <ul>
+                    <li class="swipeout">
+                        <div class="swipeout-content">
+                            <a href="/chat/1" class="item-link item-content">
+                                <div class="item-media">
+                                    <img src="images/wechat1.jpg" width="45" height="45"><span class="badge color-red">5</span>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">阿珂</div>
+                                        <div class="item-after">10:44</div>
+                                    </div>
+                                    <div class="item-text">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swipeout-actions-right">
+                            <a href="#">置顶</a>
+                            <a href="#">删除</a>
+                        </div>
+                    </li>
+                    <li class="swipeout">
+                        <div class="swipeout-content">
+                            <a href="/chat/2" class="item-link item-content">
+                                <div class="item-media">
+                                    <img src="images/wechat3.jpg" width="45" height="45">
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">李白</div>
+                                        <div class="item-after">10:44</div>
+                                    </div>
+                                    <div class="item-text">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swipeout-actions-right">
+                            <a href="#">置顶</a>
+                            <a href="#">删除</a>
+                        </div>
+                    </li>
+                    <li class="swipeout">
+                        <div class="swipeout-content">
+                            <a href="/chat/3" class="item-link item-content">
+                                <div class="item-media">
+                                    <img src="images/wechat2.jpg" width="45" height="45">
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">后羿</div>
+                                        <div class="item-after">10:44</div>
+                                    </div>
+                                    <div class="item-text">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swipeout-actions-right">
+                            <a href="#">置顶</a>
+                            <a href="#">删除</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+.search-box {
+    margin: 10px 10px 0;
+    position: relative;
+    
+}
+.search-box a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 6px 0;
+    background-color: #fff;
+    text-align: center;
+    font-size: 15px;
+    color: #aaa!important;
+    border-radius: 4px;
+}
+.search-box a i {
+    font-size: 14px;
+    margin-right: 5px;
+}
+#user-list {
+    margin: 10px 0;
+}
+.ios .list .item-media{
+    position: relative;
+}
+.ios .list .item-media img{
+    border-radius: 4px;
+}
+.ios .list .item-media .badge{
+    position: absolute;
+    right: -7px;
+    top: 3px;
+    font-size: 12px;
+    padding: 0 5px;
+    height: 16px;
+    line-height: 16px;
+}
+.ios .list .item-content .item-inner{
+    margin-left: 10px;
+}
+.ios .list .item-content .item-inner:after{
+    background-color: transparent;
+}
+.ios .list .item-content:after{
+    content: '';
+    position: absolute;
+    background-color: #eee;
+    display: block;
+    z-index: 15;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+.ios .list li:last-child .item-content:after{
+    background-color: transparent;
+}
+
+#user-list .item-link .item-title-row{
+    background-image: none;
+    padding-right: 0;
+}
+#user-list .item-link .item-title-row .item-after{
+    font-size: 12px;
+}
+/*.list .item-link .item-inner, .links-list a, .media-list .item-link .item-title-row, li.media-item .item-link .item-title-row, .media-list.chevron-center .item-link .item-inner, .media-list .chevron-center .item-link .item-inner, .media-list .item-link.chevron-center .item-inner, li.media-item.chevron-center .item-link .item-inner, li.media-item .chevron-center .item-link .item-inner, li.media-item .item-link.chevron-center .item-inner*/
+</style>
+<script>
+return {
+    data: function() {
+        return {
+            title: '消息'
+        }
+    },
+    created: function(){
+        // alert(navigator.platform)
+    },
+    methods: {
+        openAlert: function() {
+            var self = this.$app.dialog.alert('Hello world!');
+        },
+    },
+    on: {
+        pageInit: function() {
+            // do something on page init
+        },
+        pageAfterOut: function() {
+            // page has left the view
+        },
+    }
+}
+</script>
